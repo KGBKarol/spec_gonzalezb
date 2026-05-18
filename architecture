@@ -1,0 +1,61 @@
+---
+title: Traductor de lenguaje humano a sql
+version: 0.1
+date: 18/05/2026
+---
+
+## 2. `architecture.md` (Diseño Técnico)
+
+# Arquitectura: Human To Sql Translator
+
+## 1. Stack Tecnológico
+- **Lenguaje:** Python 3.11+
+- **Framework de CLI:** (Ej. `click`, `typer`, o `argparse`)
+- **Librerías Clave:** (Ej. `rich` para formateo visual, `pydantic` para validación)
+- **Pruebas (Testing):** `pytest`
+
+## 2. Arquitectura del Sistema y Diagrama de Componentes
+Explicación de las capas de la aplicación (Interfaz grafica -> Capa de Negocio -> Capa de Datos/API).
+
+## 3. Estructura de Directorios
+```text
+human_to_sql/
+│
+├── src/
+│   ├── __init__.py
+│   ├── main.py          # Punto de entrada de la app grafica
+│   ├── commands/        # Definición de comandos individuales
+│   │   ├── __init__.py
+│   │   └── ejemplo.py
+|   |
+|   ├── graphic/
+|   |   ├── screen.py
+|   |
+│   ├── core/            # Lógica de negocio pura
+│   │   └── procesador.py
+│   └── utils/           # Helpers, formateadores de texto, etc.
+│
+├── tests/               # Pruebas unitarias y de integración
+└── pyproject.toml       # Configuración de dependencias (Poetry/Pipenv/Hatch)
+```
+
+## 4. Descripción de módulos
+### 4.1 `main.py`
+Punto de entrada. Inicializa la conexión a la base de datos, instancia los
+componentes de las capas y lanza el bucle principal de la aplicacion grafica
+### 4.2 `graphic/screen.py`
+Controla el flujo de navegación de la interfaz de usuario. Input de texto, boton para traducir, boton para mostrar traducciones
+**Funciones principales:**
+| Función              | Descripción                                      |
+|----------------------|--------------------------------------------------|
+| `main()`              | Bucle principal del menú                         |
+| `translate()`        | Hace la peticion al llm con el input del usuario, y muestra el resultado |
+| `get_translations()`        | Consulta la bbdd y muestra las traduciones hechas |
+
+## 5. Dependencias externas (Opcional)
+
+| Paquete                    | Versión  | Uso                            |
+|----------------------------|----------|--------------------------------|
+| `mysql-connector-python`   | >=8.3.0  | Conexión a MySQL               |
+| `dotenv` | Ultima version | Lectura de ficheros .env |
+| `requests` | ultima version | Peticion a la api del llm |
