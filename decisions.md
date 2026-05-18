@@ -53,7 +53,7 @@ Se elige **MySQL 8.0**.
 
 ---
 
-## ADR-003: Elección de base de datos — MySQL
+## ADR-003: Elección de LLM - Gemini
 **Fecha:** 2026-04-05  
 
 **Estado:** Aceptado
