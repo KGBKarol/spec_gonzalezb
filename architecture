@@ -10,8 +10,7 @@ date: 18/05/2026
 
 ## 1. Stack Tecnológico
 - **Lenguaje:** Python 3.11+
-- **Framework de CLI:** (Ej. `click`, `typer`, o `argparse`)
-- **Librerías Clave:** (Ej. `rich` para formateo visual, `pydantic` para validación)
+- **Framework de web:** FLASK
 - **Pruebas (Testing):** `pytest`
 
 ## 2. Arquitectura del Sistema y Diagrama de Componentes
