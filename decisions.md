@@ -25,7 +25,7 @@ Se elige **`FLASK`**.
 * **Pros:** Código más limpio y legible usando type hints nativos de Python. Validación automática.
 * **Contras:** Añade una dependencia externa.
 
-## ADR-001: Elección de base de datos — MySQL
+## ADR-002: Elección de base de datos — MySQL
 **Fecha:** 2026-04-05  
 
 **Estado:** Aceptado
@@ -50,5 +50,30 @@ Se elige **MySQL 8.0**.
 **Consecuencias:**
 - Se requiere un servidor MySQL corriendo localmente o accesible en red.
 - El driver elegido es `mysql-connector-python` (oficial de Oracle, sin dependencias C).
+
+---
+
+## ADR-003: Elección de base de datos — MySQL
+**Fecha:** 2026-04-05  
+
+**Estado:** Aceptado
+
+**Contexto:**  
+Se necesita un LLM, potente con un limite alto de tokens
+**Opciones consideradas:**
+- gemini
+- grok
+- chatgpt
+
+**Decisión:**  
+Se elige **gemini**.
+
+**Justificación:**
+- Es google, mucho mas potente y benevolente
+- No es muy cara en caso de ser necesario mas tokens
+
+**Consecuencias:**
+- Se requiere una cuenta de google
+- Alomejor hace falta pagar en caso de que haya muchos usuarios
 
 ---
