@@ -1,7 +1,7 @@
 ---
-title: ""
-version: ""
-date: ""
+title: Traductor de lenguaje humano a sql
+version: 0.1
+date: 18/05/2026
 ---
 # Configuración de Agentes de IA y Personas
 
