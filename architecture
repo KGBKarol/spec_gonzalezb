@@ -33,7 +33,8 @@ human_to_sql/
 │   └── utils/           # Helpers, formateadores de texto, etc.
 │
 ├── tests/               # Pruebas unitarias y de integración
-└── pyproject.toml       # Configuración de dependencias (Poetry/Pipenv/Hatch)
+|── pyproject.toml       # Configuración de dependencias (Poetry/Pipenv/Hatch)
+└── migrations/ # Donde se guardara un .sql con la estructura de la bbdd
 ```
 
 ## 4. Descripción de módulos
