@@ -23,13 +23,11 @@ human_to_sql/
 │
 ├── src/
 │   ├── __init__.py
-│   ├── main.py          # Punto de entrada de la app grafica
-│   ├── commands/        # Definición de comandos individuales
-│   │   ├── __init__.py
-│   │   └── ejemplo.py
+│   ├── main.py          # Punto de entrada de la app web
 |   |
-|   ├── graphic/
-|   |   ├── screen.py
+|   ├── Routers/ # Definicion de los diferentes endpoints de flask
+|   ├──  |
+|   |    ├── auth.py #Logica de auth
 |   |
 │   ├── core/            # Lógica de negocio pura
 │   │   └── procesador.py
@@ -48,9 +46,9 @@ Controla el flujo de navegación de la interfaz de usuario. Input de texto, boto
 **Funciones principales:**
 | Función              | Descripción                                      |
 |----------------------|--------------------------------------------------|
-| `main()`              | Bucle principal del menú                         |
 | `translate()`        | Hace la peticion al llm con el input del usuario, y muestra el resultado |
 | `get_translations()`        | Consulta la bbdd y muestra las traduciones hechas |
+| `login()` | Inserta en la bbdd el id de la sesion |
 
 ## 5. Dependencias externas (Opcional)
 
@@ -59,3 +57,4 @@ Controla el flujo de navegación de la interfaz de usuario. Input de texto, boto
 | `mysql-connector-python`   | >=8.3.0  | Conexión a MySQL               |
 | `dotenv` | Ultima version | Lectura de ficheros .env |
 | `requests` | ultima version | Peticion a la api del llm |
+| `FLASK` | Ultima version | Interfaz web grafica |
