@@ -19,6 +19,7 @@ date: 18/05/2026
 |-------|-------------|
 | R-01  | Toda función pública debe tener docstring con parámetros y valor de retorno. |
 | R-02  | Toda consulta a la base de datos tiene que estar parametrizada para evitar sql injection |
+| R-03 | Toda respuesta del llm no tiene que ser tomada literalmente |
 
 ---
 
@@ -26,6 +27,6 @@ date: 18/05/2026
 
 - **SQL Injection:** Uso obligatorio de parámetros en todas las consultas.
 - **.env:** Uso de fichero .env con todos los datos de la conexion a la bd, api tokens, etc...
-- **Seguridad de claves:** Ninguna clave tiene que estar hardcodeada en el codigo
+- **Seguridad de claves:** Ninguna clave tiene que estar hardcodeada en el codigo, api tokens etc...
 
 ---
